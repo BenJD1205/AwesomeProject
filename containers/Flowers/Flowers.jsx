@@ -1,18 +1,13 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { CardFlower } from '../../components/Card';
-
-
 import * as styles from './Flowers.styles';
-
 
 const Flowers = (props) => {
   const {
     style = '',
     data =  [],
   } = props;
-
-  console.log(data);
 
   return (
     <View style={[styles.wrapper, style]}>

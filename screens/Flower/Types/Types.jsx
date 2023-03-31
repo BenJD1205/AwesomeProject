@@ -1,14 +1,8 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import Flowers from '../../../containers/Flowers';
-
-import { loaihoas } from './assets/loaihoa.json';
-
-
-
-
+import {loaihoas} from '../../../constants/loaihoa'
 import * as styles from './Types.styles';
-
 
 const Types = (props) => {
   const {

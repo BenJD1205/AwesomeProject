@@ -1,23 +1,23 @@
 ﻿{"loaihoas":[
   {
     "maloai": 1,
-    "tenloai": "Hoa cúc"
-
+    "tenloai": "Hoa cúc",
+    "hinh": "cuc_9.jpg"  
   },
   {
     "maloai": 2,
-    "tenloai": "Hoa cưới"
-   
+    "tenloai": "Hoa cưới",
+    "hinh": "cuoi_1.jpg"
   },
   {
     "maloai": 3,
-    "tenloai": "Hoa hồng"
-   
+    "tenloai": "Hoa hồng",
+    "hinh": "hong_2.jpg"
   },
   {
     "maloai": 4,
-    "tenloai": "Hoa xuân"
-   
+    "tenloai": "Hoa xuân",
+    "hinh": "xuan_1.jpg"
   }
 ]
 }

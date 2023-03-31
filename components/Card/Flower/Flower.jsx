@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 
 import * as styles from './Flower.styles';
 
@@ -12,13 +12,12 @@ const Flower = (props) => {
     maloai = '',
     tenhoa = '',
     mahoa = '',
+    hinh='',
   } = props;
-
-  console.log(props);
 
   const handleNavigation = (e) => {
     if(props?.route?.name === 'ScreenFlower') {
-      props.navigation.navigate('ScreenFlowerDetails', { tenhoa, mahoa })
+      props.navigation.navigate('ScreenFlowerDetails', { tenhoa, mahoa,hinh,dongia })
     }else if(props?.route?.name === 'ScreenFlowerTypes') {
       props.navigation.navigate('ScreenFlower', { tenloai, maloai })
     }
@@ -26,13 +25,36 @@ const Flower = (props) => {
 
   return (
     <TouchableOpacity 
-      style={[styles.wrapper, style]}
+      style={styled.container}
       onPress={handleNavigation}
     >
-      <Text>{tenloai || tenhoa}</Text>
+      <View style={styled.content}>
+        <Image source={hinh} style={styled.img} />
+        <View style={styled.info}>
+          <Text>{maloai}</Text>
+          <Text>{tenloai || tenhoa}</Text>
+        </View>
+      </View>
     </TouchableOpacity>
   );
 };
+
+const styled = StyleSheet.create({
+  container: {
+    margin:10,
+  },
+  content: { 
+    flexDirection: 'row',
+  },
+  img: {
+    width: 50,
+    height:50,
+  },
+  info: {
+    width: '100%',
+    paddingHorizontal:10,
+  }
+})
 
 export default Flower;
 
